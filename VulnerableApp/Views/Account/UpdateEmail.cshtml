@@ -1,0 +1,15 @@
+@{
+    ViewBag.Title = "Update Email";
+}
+<h2>Update Your Email (Vulnerable)</h2>
+
+<form method="post" action="/Account/UpdateEmail">
+    <label>Email:</label>
+    <input type="email" name="email" required />
+    <button type="submit">Update</button>
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <p style="color:green">@ViewBag.Message</p>
+}
